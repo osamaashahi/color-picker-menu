@@ -1,0 +1,47 @@
+{
+  "name": "color-picker-menu",
+  "version": "1.0.0",
+  "description": "Color picker in a popover for React",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
+  "scripts": {
+    "build": "npx babel ./src --out-dir dist --copy-files"
+  },
+  "keywords": [
+    "color picker",
+    "react color picker",
+    "react color",
+    "react color picker menu",
+    "color picker menu"
+  ],
+  "author": "Osama Shahi",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osamaashahi/color-picker-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osamaashahi/color-picker-menu/issues"
+  },
+  "homepage": "https://github.com/osamaashahi/color-picker-menu#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
