@@ -38,3 +38,10 @@ export const ColorButton = styled(ColorButtonContainer).attrs(() => ({
     outline-color: #2d3142;
   }
 `;
+
+export const RemoveButton = styled(ColorButton)`
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

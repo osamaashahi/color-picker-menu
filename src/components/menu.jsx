@@ -1,10 +1,10 @@
 import React, { forwardRef, useEffect, useRef } from 'react';
 import Portal from './portal';
 import SelectedColorIcon from './selectedColorIcon';
-import { Wrapper, Container, ColorButton } from './styled';
+import { Wrapper, Container, ColorButton, RemoveButton } from './styled';
 
 export const ColorPickerMenu = forwardRef(
-  ({ colors, selected, onChange, onHide }, buttonRef) => {
+  ({ colors, selected, removeColor, onChange, onHide }, buttonRef) => {
     const colorPickerMenuRef = useRef(null);
 
     let colorsList = colors;
@@ -63,6 +63,40 @@ export const ColorPickerMenu = forwardRef(
       <Portal>
         <Wrapper ref={colorPickerMenuRef}>
           <Container>
+            {removeColor ? (
+              <RemoveButton onClick={() => onChange(removeColor)}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  fill="#718096"
+                  viewBox="10 10 234 234"
+                >
+                  <rect width="22" height="22" fill="none"></rect>
+                  <circle
+                    cx="128"
+                    cy="128"
+                    r="96"
+                    fill="none"
+                    stroke="#718096"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="22"
+                  ></circle>
+                  <line
+                    x1="211.1"
+                    y1="80"
+                    x2="44.9"
+                    y2="176"
+                    fill="none"
+                    stroke="#718096"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="22"
+                  ></line>
+                </svg>
+              </RemoveButton>
+            ) : null}
             {colorsList.map((color, index) => {
               const isSelected = selected === color;
               return (
