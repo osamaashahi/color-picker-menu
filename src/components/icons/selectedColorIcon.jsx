@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { invertColor } from '../helpers/invertColor';
+import { invertColor } from '../../helpers/invertColor';
 
 const SelectIcon = styled.div`
   position: absolute;

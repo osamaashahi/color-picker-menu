@@ -1,5 +1,7 @@
 # Color Picker Menu
 
+![Image](https://i.imgur.com/JCKHk9B.png)
+
 ## Demo
 
 ![Demo](https://media.giphy.com/media/yLZnib26XW17jlepQZ/giphy.gif)

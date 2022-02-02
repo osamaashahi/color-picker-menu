@@ -1,10 +1,23 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef, useState } from 'react';
+import AddNewButtonIcon from './icons/addNewButtonIcon';
 import Portal from './portal';
-import SelectedColorIcon from './selectedColorIcon';
-import { Wrapper, Container, ColorButton, RemoveButton } from './styled';
+import RemoveButtonIcon from './icons/removeButtonIcon';
+import SelectedColorIcon from './icons/selectedColorIcon';
+import {
+  Wrapper,
+  Container,
+  ColorButton,
+  RemoveButton,
+  AddNewButton,
+} from './styled';
+import AddNewSection from './addNewColorSection';
 
 export const ColorPickerMenu = forwardRef(
-  ({ colors, selected, removeColor, onChange, onHide }, buttonRef) => {
+  (
+    { colors, selected, removeColor, enableAddNew = false, onChange, onHide },
+    buttonRef
+  ) => {
+    const [displayAddNewSection, setDisplayAddNewSection] = useState(false);
     const colorPickerMenuRef = useRef(null);
 
     let colorsList = colors;
@@ -59,42 +72,26 @@ export const ColorPickerMenu = forwardRef(
       }
     });
 
+    const handleColorButtonClick = (color) => {
+      if (displayAddNewSection) {
+        setDisplayAddNewSection(false);
+      }
+      if (onChange) {
+        onChange(color);
+      }
+    };
+
+    const handleNewColorInput = () => {
+      setDisplayAddNewSection(false);
+    };
+
     return (
       <Portal>
         <Wrapper ref={colorPickerMenuRef}>
           <Container>
             {removeColor ? (
               <RemoveButton onClick={() => onChange(removeColor)}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  fill="#718096"
-                  viewBox="10 10 234 234"
-                >
-                  <rect width="22" height="22" fill="none"></rect>
-                  <circle
-                    cx="128"
-                    cy="128"
-                    r="96"
-                    fill="none"
-                    stroke="#718096"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="22"
-                  ></circle>
-                  <line
-                    x1="211.1"
-                    y1="80"
-                    x2="44.9"
-                    y2="176"
-                    fill="none"
-                    stroke="#718096"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="22"
-                  ></line>
-                </svg>
+                <RemoveButtonIcon />
               </RemoveButton>
             ) : null}
             {colorsList.map((color, index) => {
@@ -105,13 +102,26 @@ export const ColorPickerMenu = forwardRef(
                   color={color}
                   isSelected={isSelected}
                   isLast={index + 1 === colorsList.length}
-                  onClick={() => (onChange ? onChange(color) : null)}
+                  onClick={() => handleColorButtonClick(color)}
                 >
                   {isSelected && <SelectedColorIcon color={color} />}
                 </ColorButton>
               );
             })}
+            {enableAddNew && (
+              <AddNewButton
+                onClick={() => setDisplayAddNewSection(!displayAddNewSection)}
+              >
+                <AddNewButtonIcon />
+              </AddNewButton>
+            )}
           </Container>
+          {displayAddNewSection && (
+            <AddNewSection
+              onChange={onChange}
+              onSuccess={handleNewColorInput}
+            />
+          )}
         </Wrapper>
       </Portal>
     );
