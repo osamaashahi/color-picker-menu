@@ -16,9 +16,9 @@ const SpinningIcon = () => {
           d="M168,40.7a96,96,0,1,1-80,0"
           fill="none"
           stroke="#718096"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
         ></path>
       </svg>
     </div>
