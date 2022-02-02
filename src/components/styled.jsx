@@ -48,14 +48,7 @@ export const RemoveButton = styled(ColorButton)`
   justify-content: center;
 `;
 
-export const AddNewButton = styled(ColorButton)`
-  background-color: #fff;
-  width: 18px;
-  height: 18px;
-  border: 1px dashed #718096;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const AddNewButton = styled(RemoveButton)`
   margin-left: 6px;
   margin-right: 0px; ;
 `;
