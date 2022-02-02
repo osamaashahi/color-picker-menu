@@ -18,7 +18,7 @@ const RemoveButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="20"
+        strokeWidth="12"
       ></circle>
       <line
         x1="195.9"
@@ -29,7 +29,7 @@ const RemoveButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="20"
+        strokeWidth="12"
       ></line>
     </svg>
   );

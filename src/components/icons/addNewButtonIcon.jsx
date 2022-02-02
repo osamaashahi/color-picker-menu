@@ -16,7 +16,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></path>
       <path
         d="M60.1,195.9a95.7,95.7,0,0,1-24.8-43.1"
@@ -24,7 +24,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></path>
       <path
         d="M152.9,220.7a94.2,94.2,0,0,1-49.7,0"
@@ -32,7 +32,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></path>
       <path
         d="M220.7,152.9a96.4,96.4,0,0,1-24.8,43"
@@ -40,7 +40,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></path>
       <path
         d="M195.9,60.1a95.7,95.7,0,0,1,24.8,43.1"
@@ -48,7 +48,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></path>
       <path
         d="M103.1,35.3a94.2,94.2,0,0,1,49.7,0"
@@ -56,7 +56,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></path>
       <line
         x1="90"
@@ -67,7 +67,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></line>
       <line
         x1="128"
@@ -78,7 +78,7 @@ const AddNewButtonIcon = () => {
         stroke="#718096"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth="9"
       ></line>
     </svg>
   );
