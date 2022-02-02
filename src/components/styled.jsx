@@ -58,7 +58,7 @@ export const AddNewColorSection = styled.div`
   margin-top: 4px;
   padding-top: 4px;
   padding-inline: 8px;
-  height: 20px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,7 +72,7 @@ export const AddNewColorTitle = styled.div`
 
 export const AddNewColorInput = styled.input`
   margin: 0 6px;
-  width: 65px;
+  width: 74px;
   height: 100%;
   font-size: 10px;
   color: #6c757d;
@@ -81,7 +81,7 @@ export const AddNewColorInput = styled.input`
   border-radius: 3px;
   border: 1px solid;
   border-color: ${(props) => (props.hasError ? '#FFB3B3' : '#e9ecef')};
-  padding-left: 14px;
+  padding-left: 8px;
   padding-right: 6px;
   &::-webkit-input-placeholder {
     color: #ced4da;
