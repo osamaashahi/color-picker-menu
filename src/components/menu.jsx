@@ -87,7 +87,7 @@ export const ColorPickerMenu = forwardRef(
 
     return (
       <Portal>
-        <Wrapper ref={colorPickerMenuRef}>
+        <Wrapper ref={colorPickerMenuRef} className="colorPickerMenu">
           <Container>
             {removeColor ? (
               <RemoveButton onClick={() => onChange(removeColor)}>

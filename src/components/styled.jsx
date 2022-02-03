@@ -104,6 +104,9 @@ export const AddNewColorButton = styled.button`
   border: 1px solid #e9ecef;
   background-color: #e9ecef;
   color: #adb5bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background-color: #dee2e6;
   }

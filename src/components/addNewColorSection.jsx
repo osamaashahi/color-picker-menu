@@ -59,6 +59,22 @@ const AddNewSection = ({ onChange, onSuccess }) => {
     }, 750);
   };
 
+  const handleKeyDown = (event) => {
+    switch (event.key) {
+      case 'Enter':
+        handleSubmit();
+        break;
+
+      case 'Esc': // IE/Edge specific value
+      case 'Escape':
+        onSuccess();
+        break;
+
+      default:
+        return;
+    }
+  };
+
   return (
     <AddNewColorSection>
       <AddNewColorTitle>HEX</AddNewColorTitle>
@@ -68,6 +84,7 @@ const AddNewSection = ({ onChange, onSuccess }) => {
         ref={newColorInputRef}
         value={newColorInputValue}
         onChange={handleNewColorInputChange}
+        onKeyDown={handleKeyDown}
       />
       <AddNewColorButton onClick={handleSubmit}>
         {showSpinningIcon ? <SpinningIcon /> : 'Save'}
