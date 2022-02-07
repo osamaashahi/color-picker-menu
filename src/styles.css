@@ -19,3 +19,10 @@
     transform: rotate(360deg);
   }
 }
+
+.dropListIcon {
+  display: flex;
+  flex-direction: column;
+  width: 8px;
+  margin-left: 2px;
+}

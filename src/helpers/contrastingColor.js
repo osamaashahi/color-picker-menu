@@ -1,4 +1,4 @@
-export const invertColor = (hex) => {
+export const contrastingColor = (hex) => {
   if (hex.indexOf('#') === 0) {
     hex = hex.slice(1);
   }

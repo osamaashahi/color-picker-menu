@@ -1,0 +1,52 @@
+{
+  "light": {
+    "id": "light",
+    "colors": {
+      "primaryBg": "#fff",
+      "secondaryBg": "#fff",
+      "ternaryBg": "#fff",
+      "primaryText": "#ced4da",
+      "placeholder": "#ced4da",
+      "colorOutline": {
+        "default": "transparent",
+        "hover": "#2d3142"
+      },
+      "border": "#dfe1e6",
+      "icon": "#718096",
+      "error": "#FFB3B3",
+      "button": {
+        "text": "#adb5bd",
+        "bg": "#e9ecef",
+        "hover": {
+          "bg": "#dee2e6"
+        }
+      },
+      "boxShadow": "rgb(9 30 66 / 25%)"
+    }
+  },
+  "dark": {
+    "id": "dark",
+    "colors": {
+      "primaryBg": "#343A40",
+      "secondaryBg": "#212529",
+      "ternaryBg": "#495057",
+      "primaryText": "#ADB5BD",
+      "placeholder": "#6C757D",
+      "colorOutline": {
+        "default": "transparent",
+        "hover": "#6C757D"
+      },
+      "border": "#6C757D",
+      "icon": "#6C757D",
+      "error": "#974949",
+      "button": {
+        "text": "#ADB5BD",
+        "bg": "#495057",
+        "hover": {
+          "bg": "#6C757D"
+        }
+      },
+      "boxShadow": "rgb(200 215 255 / 25%)"
+    }
+  }
+}

@@ -1,12 +1,18 @@
 import React from 'react';
+import { useTheme } from 'styled-components';
 
 const RemoveButtonIcon = () => {
+  const theme = useTheme();
+
+  const iconColor = theme.colors.icon;
+  const iconStrokeWidth = theme.id === 'light' ? '16' : '20';
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="22"
       height="22"
-      fill="#718096"
+      fill={iconColor}
       viewBox="20 20 216 216"
     >
       <rect width="256" height="256" fill="none"></rect>
@@ -15,10 +21,10 @@ const RemoveButtonIcon = () => {
         cy="128"
         r="96"
         fill="none"
-        stroke="#718096"
+        stroke={iconColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth={iconStrokeWidth}
       ></circle>
       <line
         x1="195.9"
@@ -26,10 +32,10 @@ const RemoveButtonIcon = () => {
         x2="60.1"
         y2="195.9"
         fill="none"
-        stroke="#718096"
+        stroke={iconColor}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="12"
+        strokeWidth={iconStrokeWidth}
       ></line>
     </svg>
   );
